@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Briskit Agency</title>
+		<link rel="stylesheet" href="/assets/css/styles.css" />
+		<link rel="shortcut icon" href="/assets/images/logo.png" type="image/png" />
+		<script src="/assets/js/app.js" defer></script>
+	</head>
+	<body>
+		<main class="main" id="home">
+			<header class="header">
+				<!-- NAVIGATION -->
+				<div class="toggle active"></div>
+				<nav class="navigation hidden">
+					<a href="#home" class="navigation-link">home</a>
+					<a href="#home" class="navigation-link">about</a>
+					<a href="#home" class="navigation-link">products</a>
+					<a href="#home" class="navigation-link">solutions</a>
+					<a href="#home" class="navigation-link">plans</a>
+					<a href="#home" class="navigation-link">contact</a>
+				</nav>
+			</header>
+			<!-- BUTTON -->
+			<button class="btn show-modal" type="button">Register</button>
+			<!-- SOCIAL LINKS -->
+			<article class="socials">
+				<!-- FACEBOOK -->
+				<a
+					href="https://facebook.com"
+					target="_blank"
+					class="socials__link"
+					title="Facebook"
+					rel="noopener noreferrer"
+					><img
+						src="/assets/images/icon-facebook.svg"
+						alt="facebook"
+						class="social__link--icon"
+				/></a>
+				<!-- INSTAGRAM -->
+				<a
+					href="https://instagram.com"
+					target="_blank"
+					class="socials__link"
+					title="Instagram"
+					rel="noopener noreferrer"
+					><img
+						src="/assets/images/icon-instagram.svg"
+						alt="instagram"
+						class="social__link--icon"
+				/></a>
+				<!-- TWITTER -->
+				<a
+					href="https://twitter.com"
+					target="_blank"
+					class="socials__link"
+					title="Twitter"
+					rel="noopener noreferrer"
+					><img
+						src="/assets/images/icon-twitter.svg"
+						alt="twitter"
+						class="social__link--icon"
+				/></a>
+				<!-- YOUTUBE -->
+				<a
+					href="https://youtube.com"
+					target="_blank"
+					class="socials__link"
+					title="Youtube"
+					rel="noopener noreferrer"
+					><img
+						src="/assets/images/icon-youtube.svg"
+						alt="youtube"
+						class="social__link--icon"
+				/></a>
+			</article>
+		</main>
+		<!-- FORM -->
+		<aside class="form-container hidden">
+			<div class="close-modal">
+				<img
+					src="/assets/images/icon-close.svg"
+					alt="close modal"
+					class="close-btn"
+				/>
+			</div>
+			<form action="https://formspree.io/f/mnqybqrz" method="post" class="form">
+				<h3 class="heading">Register to get notified</h3>
+				<label class="form__item">
+					<span class="form__item--label">name</span>
+					<input
+						type="text"
+						required
+						name="Name"
+						placeholder="John Doe"
+						autofocus
+						class="form__item--input"
+					/>
+				</label>
+				<label class="form__item">
+					<span class="form__item--label">email</span>
+					<input
+						type="email"
+						required
+						name="Email"
+						placeholder="email@example.com"
+						class="form__item--input"
+					/>
+				</label>
+				<label class="form__item">
+					<span class="form__item--label">Phone number</span>
+					<input
+						type="tel"
+						required
+						name="Mobile Number"
+						placeholder="08012345678"
+						class="form__item--input"
+					/>
+				</label>
+				<label class="form__item">
+					<span class="form__item--label">country</span>
+					<select name="country" id="country"></select>
+				</label>
+				<button class="btn form-btn">submit</button>
+			</form>
+		</aside>
+	</body>
+</html>
