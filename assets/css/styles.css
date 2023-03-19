@@ -120,9 +120,10 @@ a:link {
 /*============ SOCIAL ICONS ================== */
 .socials {
 	width: 100%;
-	margin-top: 6rem;
+	margin-top: 8rem;
 	padding: 1rem;
 	display: flex;
+	gap: 2rem;
 	justify-content: center;
 	align-items: center;
 }
@@ -147,9 +148,8 @@ a:link {
 	width: 100%;
 	max-width: 60rem;
 	margin-inline: auto;
-	min-height: max-content;
-	height: 100dvh;
-	height: 100vh;
+	min-height: 100vh;
+	min-height: 100dvh;
 	padding: 4rem;
 	display: block;
 	background-color: #fff;
@@ -193,7 +193,7 @@ a:link {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	gap: 0.5rem;
+	gap: 0.7rem;
 	margin-bottom: 2rem;
 }
 
@@ -223,6 +223,10 @@ a:link {
 #country:focus-within {
 	border: 2px solid rgb(250, 78, 161);
 	outline: unset;
+}
+
+.form-btn {
+	margin-top: 4rem;
 }
 
 /*============== UTILITY CLASS ==========*/
@@ -258,6 +262,7 @@ a:link {
 
 	.navigation {
 		margin-right: 2rem;
+		width: max-content;
 	}
 
 	.navigation-link:hover {
