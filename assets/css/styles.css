@@ -48,7 +48,7 @@ a:link {
 	margin-left: auto;
 	align-self: flex-end;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: flex-start;
 }
 
@@ -259,6 +259,8 @@ a:link {
 		display: flex;
 		position: static;
 		background-color: transparent;
+		margin-right: 2rem;
+		width: max-content;
 	}
 
 	#home {
@@ -268,9 +270,23 @@ a:link {
 		background-blend-mode: screen;
 	}
 
-	.navigation {
-		margin-right: 2rem;
-		width: max-content;
+	.navigation-link {
+		font-size: 1.8rem;
+	}
+
+	.show-modal {
+		font-size: 2rem;
+		font-weight: 700;
+		padding: 1rem 2rem;
+		background-color: transparent;
+		color: rgb(24, 23, 23);
+		border-radius: 0;
+		margin-right: 14rem;
+	}
+
+	.show-modal:hover {
+		color: #fff;
+		background-color: rgb(24, 23, 23);
 	}
 
 	.navigation-link:hover {
@@ -279,7 +295,7 @@ a:link {
 	}
 
 	.socials {
-		margin-top: 4rem;
+		margin-top: 6rem;
 	}
 
 	.socials__link {
