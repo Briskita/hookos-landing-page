@@ -48,7 +48,15 @@ a:link {
 	margin-left: auto;
 	align-self: flex-end;
 	display: flex;
-	justify-content: end;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.logo {
+	/* width: 4rem; */
+	/* aspect-ratio: 1/1; */
+	display: inline-block;
+	margin-right: auto;
 }
 
 /*================= NAVBAR TOGGLE ==============*/
@@ -101,9 +109,9 @@ a:link {
 	height: 100dvh;
 	width: 100%;
 	padding-inline: 2rem;
-	background-image: url('../images/bg-img.jpg');
+	background-image: url('../images/bg-with-text.jpg');
 	background-size: cover;
-	background-position-x: 40%;
+	background-position-x: 10%;
 	background-repeat: no-repeat;
 	display: flex;
 	flex-direction: column;
