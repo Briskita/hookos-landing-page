@@ -121,8 +121,12 @@ a:link {
 }
 
 .show-modal {
-	font-weight: 400;
+	font-weight: 700;
 	font-size: 3rem;
+	padding: 1rem 3rem;
+	background-color: rgb(220, 220, 220, 0.6);
+	color: rgb(24, 23, 23);
+	border-radius: 0;
 }
 
 /*============ SOCIAL ICONS ================== */
@@ -276,11 +280,6 @@ a:link {
 
 	.show-modal {
 		font-size: 2rem;
-		font-weight: 700;
-		padding: 1rem 2rem;
-		background-color: transparent;
-		color: rgb(24, 23, 23);
-		border-radius: 0;
 		margin-right: 14rem;
 	}
 
