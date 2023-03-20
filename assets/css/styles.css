@@ -35,8 +35,8 @@ a:link {
 	min-width: 15rem;
 	padding: 1.5rem 3rem;
 	margin: auto 2rem 2rem;
-	border: 2px solid rgb(250, 78, 161);
-	background-color: rgb(250, 78, 161);
+	border: 2px solid rgb(24, 23, 23);
+	background-color: rgb(24, 23, 23);
 	cursor: pointer;
 	border-radius: 0.5rem;
 	transition: all 0.4s;
@@ -77,13 +77,13 @@ a:link {
 	position: absolute;
 	display: flex;
 	flex-direction: column;
-	padding: 2rem 0;
+	padding: 2rem;
 	gap: 2rem;
-	width: 70%;
+	max-width: 70%;
 	top: 4rem;
 	right: 4rem;
 	border-radius: 1rem;
-	background-color: white;
+	background-color: rgb(233, 230, 230);
 	z-index: 50;
 }
 .navigation-link {
@@ -103,7 +103,7 @@ a:link {
 	padding-inline: 2rem;
 	background-image: url('../images/bg-img.jpg');
 	background-size: cover;
-	background-position-x: left;
+	background-position-x: 40%;
 	background-repeat: no-repeat;
 	display: flex;
 	flex-direction: column;
@@ -211,19 +211,18 @@ a:link {
 	border-radius: 0.5rem;
 	border: 2px solid;
 	outline: unset;
-	caret-color: rgb(250, 78, 161);
 }
 
 .form__item--input::placeholder {
 	font-size: 1.4rem;
 }
 
-.form__item--input:focus,
+/* .form__item--input:focus,
 .form__item--input:active,
 #country:focus-within {
 	border: 2px solid rgb(250, 78, 161);
 	outline: unset;
-}
+} */
 
 .form-btn {
 	margin-top: 4rem;
@@ -238,7 +237,7 @@ a:link {
 @media screen and (min-width: 720px) {
 	.btn:hover {
 		background-color: transparent;
-		color: rgb(250, 78, 161);
+		color: rgb(24, 23, 23);
 	}
 
 	.toggle,
@@ -246,6 +245,7 @@ a:link {
 		display: none;
 	}
 
+	.navigation,
 	.navigation.hidden {
 		flex-direction: row;
 		display: flex;
@@ -266,8 +266,12 @@ a:link {
 	}
 
 	.navigation-link:hover {
-		border-bottom: 2px solid rgb(250, 78, 161);
+		border-bottom: 2px solid rgb(24, 23, 23);
 		padding-bottom: 0;
+	}
+
+	.socials {
+		margin-top: 4rem;
 	}
 
 	.socials__link {
