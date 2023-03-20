@@ -111,7 +111,7 @@ a:link {
 	padding-inline: 2rem;
 	background-image: url('../images/bg-with-text.jpg');
 	background-size: cover;
-	background-position-x: 10%;
+	background-position-x: 2%;
 	background-repeat: no-repeat;
 	display: flex;
 	flex-direction: column;
