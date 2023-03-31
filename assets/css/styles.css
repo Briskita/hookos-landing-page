@@ -5,12 +5,15 @@ html {
 	font-size: 62.5%;
 	font-family: 'Public Sans', 'Gill Sans', 'Gill Sans MT', sans-serif;
 	scroll-behavior: smooth;
+	height: 100%;
 }
 
 body {
 	overflow-x: hidden;
 	font-size: 1.6rem;
 	background-color: rgb(220, 220, 220, 0.4);
+	position: relative;
+	height: 100%;
 }
 
 * {
@@ -41,6 +44,10 @@ a:link {
 	border-radius: 0.5rem;
 	transition: all 0.4s;
 	transform-origin: left;
+}
+
+.faded {
+	color: rgba(92, 90, 90, 0.8);
 }
 
 .header {
@@ -95,10 +102,10 @@ a:link {
 
 /*=============== BODY =====================*/
 #home {
-	position: relative;
+	position: absolute;
 	margin-inline: auto;
-	height: 100vh;
-	height: 100dvh;
+	/* height: 95vh; */
+	/* height: 95dvh; */
 	width: 100%;
 	padding-inline: 2rem;
 	background-image: url('../images/bg-with-text.jpg');
@@ -109,7 +116,11 @@ a:link {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	z-index: 0;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
 
 .show-modal {
@@ -157,8 +168,6 @@ a:link {
 	width: 100%;
 	max-width: 60rem;
 	margin-inline: auto;
-	min-height: 100vh;
-	min-height: 100dvh;
 	padding: 4rem;
 	display: block;
 	background-color: #fff;
@@ -166,6 +175,7 @@ a:link {
 	top: 0;
 	left: 0;
 	right: 0;
+	bottom: 0;
 	z-index: 100;
 	transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
 }
