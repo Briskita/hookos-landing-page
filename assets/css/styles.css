@@ -28,6 +28,16 @@ a:link {
 	color: inherit;
 }
 
+.error {
+	color: orangered;
+	margin: 1rem;
+}
+
+.success {
+	color: green;
+	margin: 1rem;
+}
+
 /*============== GENERAL BUTTON STYLES ============*/
 .btn {
 	color: white;

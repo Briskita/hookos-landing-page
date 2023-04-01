@@ -108,6 +108,11 @@
 						class="form__item--input"
 					/>
 				</label>
+
+				<label class="form__item">
+					<span class="form__item--label">country</span>
+					<select name="country" id="country"></select>
+				</label>
 				<label class="form__item">
 					<span class="form__item--label"
 						>Phone number <span class="faded">(optional)</span></span
@@ -116,12 +121,9 @@
 						type="tel"
 						name="Mobile Number"
 						placeholder="08012345678"
-						class="form__item--input"
+						class="form__item--input tel"
 					/>
-				</label>
-				<label class="form__item">
-					<span class="form__item--label">country</span>
-					<select name="country" id="country"></select>
+					<cite class="validation-message"></cite>
 				</label>
 				<button class="btn form-btn">submit</button>
 			</form>
