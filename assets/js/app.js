@@ -98,7 +98,7 @@ function checkStatus(data) {
 	} else {
 		// PHONE NUMBER IS NOT VALID
 		validationMessage.classList.remove('hidden');
-		validationMessage.textContent = 'Please enter a valid number';
+		// validationMessage.textContent = 'Please enter a valid number';
 		validationMessage.classList.add('error');
 
 		numberInput.style.borderColor = 'red';

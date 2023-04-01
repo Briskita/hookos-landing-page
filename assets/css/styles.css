@@ -30,12 +30,12 @@ a:link {
 
 .error {
 	color: orangered;
-	margin: 1rem;
+	margin: 0.5rem 1rem;
 }
 
 .success {
 	color: green;
-	margin: 1rem;
+	margin: 0.5rem 1rem;
 }
 
 /*============== GENERAL BUTTON STYLES ============*/
