@@ -109,7 +109,7 @@ form.addEventListener('submit', (e) => {
 
 	let formData = new FormData(form);
 
-	let message = '';
+	let message = '<h4>You have a new form submission</h4><br><br>';
 	for (let pair of formData.entries()) {
 		message += `<strong>${pair[0]}:</strong> ${pair[1]} <br>`;
 	}
@@ -118,7 +118,7 @@ form.addEventListener('submit', (e) => {
 		Host: 'smtp.elasticemail.com',
 		Username: 'webdevsaje@gmail.com',
 		Password: '22725FF3AE2F85E996A3F4265B4B78974753',
-		To: 'webdevsaje@gmail.com',
+		To: 'gsmsage100@gmail.com',
 		From: 'webdevsaje@gmail.com',
 		Subject: 'Hookos Form',
 		Body: message,
