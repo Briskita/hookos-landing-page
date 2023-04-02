@@ -118,9 +118,9 @@ form.addEventListener('submit', (e) => {
 		Host: 'smtp.elasticemail.com',
 		Username: 'webdevsaje@gmail.com',
 		Password: '22725FF3AE2F85E996A3F4265B4B78974753',
-		To: 'gsmsage100@gmail.com',
+		To: 'phill@hookos.org',
 		From: 'webdevsaje@gmail.com',
-		Subject: 'Hookos Form',
+		Subject: 'Hookos Subscription Form',
 		Body: message,
 	})
 		.then((message) => console.log(message))
