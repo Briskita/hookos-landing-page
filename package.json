@@ -1,0 +1,20 @@
+{
+  "name": "briskit-landing-page",
+  "version": "1.0.0",
+  "description": "- [Overview](#overview)\r   - [The challenge](#the-challenge)\r   - [Screenshot](#screenshot)\r   - [Links](#links)\r - [My process](#my-process)\r   - [Built with](#built-with)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SageKyle/briskit-landing-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SageKyle/briskit-landing-page/issues"
+  },
+  "homepage": "https://github.com/SageKyle/briskit-landing-page#readme"
+}

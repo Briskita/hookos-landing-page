@@ -7,6 +7,7 @@
 		<title>Hookos Nation</title>
 		<link rel="stylesheet" href="assets/css/styles.css" />
 		<link rel="shortcut icon" href="assets/images/logo.png" type="image/png" />
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
 		<script src="assets/js/app.js" type="module" defer></script>
 	</head>
 	<body>
@@ -85,7 +86,8 @@
 					class="close-btn"
 				/>
 			</div>
-			<form action="https://formspree.io/f/mnqybqrz" method="post" class="form">
+			<form action="/" method="post" class="form">
+				<!-- https://formspree.io/f/mnqybqrz -->
 				<h3 class="heading">Register to connect</h3>
 				<label class="form__item">
 					<span class="form__item--label">name</span>
@@ -127,6 +129,8 @@
 					<select name="country" id="country"></select>
 				</label>
 
+				<!-- <button class="btn test" type="button">test</button> -->
+				<p class="success form-info hidden">Form sumbitted successfully</p>
 				<button class="btn form-btn">submit</button>
 			</form>
 		</aside>

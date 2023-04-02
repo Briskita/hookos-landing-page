@@ -1,7 +1,7 @@
 // DATA
 import countriesData from './script.js';
 
-// UI ELEMENT SELECTORS
+// ===================== UI ELEMENT SELECTORS ====================
 // NAVBAR
 const toggle = document.querySelector('.toggle');
 const navigation = document.querySelector('nav');
@@ -12,6 +12,7 @@ const formContainer = document.querySelector('.form-container');
 const numberInput = document.querySelector('.tel');
 const validationMessage = document.querySelector('.validation-message');
 const countriesInput = document.getElementById('country');
+const form = document.querySelector('.form');
 
 // ================= EVENTS ================
 
@@ -53,8 +54,6 @@ numberInput.addEventListener('focusout', (e) => {
 	// CHECK IF USER ADDED COUNTRY CODE (CHECK IF NUMBER STARTS WITH +)
 	if (number.charAt(0) !== '+') {
 		number = countryCode + e.target.value;
-		// 	number = e.target.value;
-		// } else {
 	}
 
 	const url = `https://phonevalidation.abstractapi.com/v1/?api_key=c594494f1d704e9189c778b6305ae64f&phone=${number}`;
@@ -105,11 +104,39 @@ function checkStatus(data) {
 	}
 }
 
+form.addEventListener('submit', (e) => {
+	e.preventDefault();
+
+	let formData = new FormData(form);
+
+	let message = '';
+	for (let pair of formData.entries()) {
+		message += `<strong>${pair[0]}:</strong> ${pair[1]} <br>`;
+	}
+
+	Email.send({
+		Host: 'smtp.elasticemail.com',
+		Username: 'webdevsaje@gmail.com',
+		Password: '22725FF3AE2F85E996A3F4265B4B78974753',
+		To: 'webdevsaje@gmail.com',
+		From: 'webdevsaje@gmail.com',
+		Subject: 'Hookos Form',
+		Body: message,
+	})
+		.then((message) => console.log(message))
+		.then(() => {
+			document.querySelector('.form-info').classList.remove('hidden');
+			setTimeout(() => {
+				location.reload();
+			}, 2000);
+		});
+});
+
 // THESE WERE PREVIOUS IMPLIMENTATIONS OF COUNTRY SELECTION
 
 // countriesInput.addEventListener('change', (e) => {
 // 	getCountryCode();
-// });
+// }); 2492e181-2999-403c-886b-be315baa9c7c
 
 // fetch('https://restcountries.com/v3.1/all')
 // fetch('https://countrycode.dev/api/calls')
@@ -128,3 +155,5 @@ function checkStatus(data) {
 
 // countriesData.forEach((data) => {
 // });
+
+// elastic: 22725FF3AE2F85E996A3F4265B4B78974753
