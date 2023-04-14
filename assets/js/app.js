@@ -9,8 +9,8 @@ const navigation = document.querySelector('nav');
 const ShowModal = document.querySelector('.show-modal');
 const hideModal = document.querySelector('.close-btn');
 const formContainer = document.querySelector('.form-container');
-const numberInput = document.querySelector('.tel');
-const validationMessage = document.querySelector('.validation-message');
+// const numberInput = document.querySelector('.tel');
+// const validationMessage = document.querySelector('.validation-message');
 const countriesInput = document.getElementById('country');
 const form = document.querySelector('.form');
 
@@ -45,27 +45,6 @@ hideModal.addEventListener('click', () => {
 	formContainer.classList.add('hidden');
 });
 
-// PHONE NUMBER VALIDATION
-numberInput.addEventListener('focusout', (e) => {
-	let number = e.target.value;
-	// let inputValue = e.target.value;
-	let countryCode = getCountryCode();
-
-	// CHECK IF USER ADDED COUNTRY CODE (CHECK IF NUMBER STARTS WITH +)
-	if (number.charAt(0) !== '+') {
-		number = countryCode + e.target.value;
-	}
-
-	const url = `https://phonevalidation.abstractapi.com/v1/?api_key=c594494f1d704e9189c778b6305ae64f&phone=${number}`;
-
-	fetch(url)
-		.then((res) => res.json())
-		.then((data) => {
-			checkStatus(data);
-		})
-		.catch((err) => console.log(err));
-});
-
 // ======================= FUNCTIONS ===================
 
 // GET COUNTRY CODE FROM SELECTED COUNTRY OPTION
@@ -85,27 +64,9 @@ function countryOptions(country) {
 	return `<option data-code=${countryCode}>${countryName}</option>`;
 }
 
-// SHOW NUMBER VALIDITY STATUS
-function checkStatus(data) {
-	if (data.valid) {
-		// PHONE NUMBER IS VALID
-		validationMessage.classList.remove('error');
-		validationMessage.classList.add('hidden');
-		// validationMessage.textContent = `${data.country.name} ${data.country.prefix}`;
-		numberInput.style.borderColor = 'green';
-		numberInput.value = data.format.international;
-	} else {
-		// PHONE NUMBER IS NOT VALID
-		validationMessage.classList.remove('hidden');
-		// validationMessage.textContent = 'Please enter a valid number';
-		validationMessage.classList.add('error');
-
-		numberInput.style.borderColor = 'red';
-	}
-}
-
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
+	const countryCode = getCountryCode();
 
 	let formData = new FormData(form);
 
@@ -113,12 +74,13 @@ form.addEventListener('submit', (e) => {
 	for (let pair of formData.entries()) {
 		message += `<strong>${pair[0]}:</strong> ${pair[1]} <br>`;
 	}
+	message += `<strong>Country Code:</strong> ${countryCode}`;
 
 	Email.send({
 		Host: 'smtp.elasticemail.com',
 		Username: 'webdevsaje@gmail.com',
 		Password: '22725FF3AE2F85E996A3F4265B4B78974753',
-		To: 'phill@hookos.org',
+		To: 'webdevsaje@gmail.com',
 		From: 'webdevsaje@gmail.com',
 		Subject: 'Hookos Subscription Form',
 		Body: message,
@@ -132,7 +94,49 @@ form.addEventListener('submit', (e) => {
 		});
 });
 
-// THESE WERE PREVIOUS IMPLIMENTATIONS OF COUNTRY SELECTION
+// SHOW NUMBER VALIDITY STATUS
+// function checkStatus(data) {
+// 	if (typeof data == 'number') {
+// 		// PHONE NUMBER IS VALID
+// 		validationMessage.classList.remove('error');
+// 		validationMessage.classList.add('hidden');
+// 		// validationMessage.textContent = `${data.country.name} ${data.country.prefix}`;
+// 		validationMessage.textContent = `success!!!`;
+// 		numberInput.style.borderColor = 'green';
+// 		// numberInput.value = data.format.international;
+// 		numberInput.value = data;
+// 	} else {
+// 		// PHONE NUMBER IS NOT VALID
+// 		validationMessage.classList.remove('hidden');
+// 		validationMessage.textContent = 'Please enter a valid number';
+// 		validationMessage.classList.add('error');
+
+// 		numberInput.style.borderColor = 'red';
+// 	}
+// }
+
+// PHONE NUMBER VALIDATION
+// numberInput.addEventListener('focusout', (e) => {
+// 	let number = e.target.value;
+// 	// let inputValue = e.target.value;
+// 	let countryCode = getCountryCode();
+
+// 	// CHECK IF USER ADDED COUNTRY CODE (CHECK IF NUMBER STARTS WITH +)
+// 	if (number.charAt(0) !== '+') {
+// 		number = countryCode + e.target.value;
+// 	}
+
+// 	// const url = `https://phonevalidation.abstractapi.com/v1/?api_key=c594494f1d704e9189c778b6305ae64f&phone=${number}`;
+
+// 	// fetch(url)
+// 	// 	.then((res) => res.json())
+// 	// 	.then((data) => {
+// 	// 		checkStatus(data);
+// 	// 	})
+// 	// 	.catch((err) => console.log(err));
+// });
+
+// THESE WERE PREVIOUS IMPLIMENTATIONS OF COUNTRY SELECTION phill@hookos.org
 
 // countriesInput.addEventListener('change', (e) => {
 // 	getCountryCode();
