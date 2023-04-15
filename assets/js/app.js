@@ -80,7 +80,7 @@ form.addEventListener('submit', (e) => {
 		Host: 'smtp.elasticemail.com',
 		Username: 'webdevsaje@gmail.com',
 		Password: '22725FF3AE2F85E996A3F4265B4B78974753',
-		To: 'webdevsaje@gmail.com',
+		To: 'phill@hookos.org',
 		From: 'webdevsaje@gmail.com',
 		Subject: 'Hookos Subscription Form',
 		Body: message,
@@ -94,70 +94,3 @@ form.addEventListener('submit', (e) => {
 		});
 });
 
-// SHOW NUMBER VALIDITY STATUS
-// function checkStatus(data) {
-// 	if (typeof data == 'number') {
-// 		// PHONE NUMBER IS VALID
-// 		validationMessage.classList.remove('error');
-// 		validationMessage.classList.add('hidden');
-// 		// validationMessage.textContent = `${data.country.name} ${data.country.prefix}`;
-// 		validationMessage.textContent = `success!!!`;
-// 		numberInput.style.borderColor = 'green';
-// 		// numberInput.value = data.format.international;
-// 		numberInput.value = data;
-// 	} else {
-// 		// PHONE NUMBER IS NOT VALID
-// 		validationMessage.classList.remove('hidden');
-// 		validationMessage.textContent = 'Please enter a valid number';
-// 		validationMessage.classList.add('error');
-
-// 		numberInput.style.borderColor = 'red';
-// 	}
-// }
-
-// PHONE NUMBER VALIDATION
-// numberInput.addEventListener('focusout', (e) => {
-// 	let number = e.target.value;
-// 	// let inputValue = e.target.value;
-// 	let countryCode = getCountryCode();
-
-// 	// CHECK IF USER ADDED COUNTRY CODE (CHECK IF NUMBER STARTS WITH +)
-// 	if (number.charAt(0) !== '+') {
-// 		number = countryCode + e.target.value;
-// 	}
-
-// 	// const url = `https://phonevalidation.abstractapi.com/v1/?api_key=c594494f1d704e9189c778b6305ae64f&phone=${number}`;
-
-// 	// fetch(url)
-// 	// 	.then((res) => res.json())
-// 	// 	.then((data) => {
-// 	// 		checkStatus(data);
-// 	// 	})
-// 	// 	.catch((err) => console.log(err));
-// });
-
-// THESE WERE PREVIOUS IMPLIMENTATIONS OF COUNTRY SELECTION phill@hookos.org
-
-// countriesInput.addEventListener('change', (e) => {
-// 	getCountryCode();
-// }); 2492e181-2999-403c-886b-be315baa9c7c
-
-// fetch('https://restcountries.com/v3.1/all')
-// fetch('https://countrycode.dev/api/calls')
-// 	.then((res) => res.json())
-// 	.then((data) => {
-// 		let countries = '';
-// 		data.forEach((country) => {
-// 			countries += countryOptions(country);
-// 		});
-
-// 		countriesInput.innerHTML = countries;
-// 	})
-// 	.catch((err) => {
-// 		console.error('error message: ', err);
-// 	});
-
-// countriesData.forEach((data) => {
-// });
-
-// elastic: 22725FF3AE2F85E996A3F4265B4B78974753
