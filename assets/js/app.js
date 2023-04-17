@@ -78,8 +78,8 @@ form.addEventListener('submit', (e) => {
 
 	Email.send({
 		Host: 'smtp.elasticemail.com',
-		Username: 'webdevsaje@gmail.com',
-		Password: '22725FF3AE2F85E996A3F4265B4B78974753',
+		Username: 'phill@hookos.org',
+		Password: '9319878FF8B407A0121C6D6F58204D4EB168',
 		To: 'phill@hookos.org',
 		From: 'phill@hookos.org',
 		Subject: 'Hookos Subscription Form',
