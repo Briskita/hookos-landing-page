@@ -81,7 +81,7 @@ form.addEventListener('submit', (e) => {
 		Username: 'webdevsaje@gmail.com',
 		Password: '22725FF3AE2F85E996A3F4265B4B78974753',
 		To: 'phill@hookos.org',
-		From: 'webdevsaje@gmail.com',
+		From: 'phill@hookos.org',
 		Subject: 'Hookos Subscription Form',
 		Body: message,
 	})
