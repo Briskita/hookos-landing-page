@@ -152,7 +152,7 @@ a:link {
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-end;
-	color: #afa9a9;
+	color: rgb(233, 230, 230);
 }
 
 /*============ SOCIAL ICONS ================== */
@@ -172,9 +172,11 @@ a:link {
 
 .social__link--icon {
 	width: 3rem;
+	aspect-ratio: 1/1;
 	filter: invert(100%);
 	transition: all 0.2s ease-in-out;
 	transform-origin: left;
+	object-fit: fill;
 }
 
 .social__link--icon.tiktok {
@@ -293,8 +295,9 @@ a:link {
 	#home {
 		background-size: contain;
 		background-position: center;
-		background-color: rgb(100,149,207, .7);
-		background-blend-mode: screen;
+		background-color: rgb(78,157,233, .99);
+		/* background-color: rgb(100,149,207, .99); */
+		background-blend-mode: hard-light;
 	}
 
 	.navigation-link {
@@ -318,7 +321,7 @@ a:link {
 
 	.footer {
 		margin-top: 6rem;
-		color: black;
+		/* color: black; */
 	}
 
 	.socials__link {
