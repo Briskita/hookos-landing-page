@@ -20,8 +20,21 @@
 					<a href="#home" class="navigation-link">hookos nation</a>
 				</nav>
 			</header>
+			<section class="container">
+				<div class="img__wrapper">
+
+					<img src="assets/images/hookos-bg-img.jpg" alt="" class="main__img">
+				</div>
+				<article class="txt-content">
+
+					<h2 class="heading">...You'll find love here! connect with <span>christians</span></h2>
+					<button class="btn show-modal" type="button">Join us</button>
+					<h4 class="quote-txt">It's rebirth of the early church! <span class="verse">acts 2</span></h4>
+					
+					<p class="main-txt">...All the believers were together and had everything in common. They sold property and possesions to give to anyone who had need. Everyday they continued to meet together in the temple courts. They broke bread in their homes and ate together with glad and sincere hearts, praising God and enjoying the favor of all the people. And the Lord added to their number daily those who were being saved.</p>
+				</article>
+			</section>
 			<!-- BUTTON -->
-			<button class="btn show-modal" type="button">Join Now</button>
 			<footer class="footer">
 				<p class="footer__txt">Kindly follow us on socials:</p>
 				<!-- SOCIAL LINKS -->
@@ -50,7 +63,7 @@
 							alt="instagram"
 							class="social__link--icon"
 					/></a>
-					<!-- TWITTER -->
+					<!-- TICKTOK -->
 					<a
 						href="https://tiktok.com/@hookosfamily"
 						target="_blank"
@@ -58,7 +71,7 @@
 						title="Tiktok"
 						rel="noopener noreferrer"
 						><img
-							src="assets/images/icon-tiktok.png"
+							src="assets/images/tiktok-icon.png"
 							alt="tiktok"
 							class="social__link--icon tiktok"
 					/></a>
@@ -79,60 +92,63 @@
 		</main>
 		<!-- FORM -->
 		<aside class="form-container hidden">
-			<div class="close-modal">
-				<img
-					src="assets/images/icon-close.svg"
-					alt="close modal"
-					class="close-btn"
-				/>
-			</div>
-			<form action="/" method="post" class="form">
-				<!-- https://formspree.io/f/mnqybqrz -->
-				<h3 class="heading">Register to connect</h3>
-				<label class="form__item">
-					<span class="form__item--label">name</span>
-					<input
-						type="text"
-						required
-						name="Name"
-						placeholder="John Doe"
-						autofocus
-						class="form__item--input"
-					/>
-				</label>
-				<label class="form__item">
-					<span class="form__item--label">email</span>
-					<input
-						type="email"
-						required
-						name="Email"
-						placeholder="email@example.com"
-						class="form__item--input"
-					/>
-				</label>
-				<label class="form__item">
-					<span class="form__item--label"
-						>Phone number <span class="faded">(optional)</span></span
-					>
-					<input
-						type="tel"
-						name="Mobile Number"
-						placeholder="08012345678"
-						class="form__item--input tel"
-					/>
-					<cite class="validation-message hidden"
-						>Please enter a valid phone number</cite
-					>
-				</label>
-				<label class="form__item">
-					<span class="form__item--label">country</span>
-					<select name="country" id="country"></select>
-				</label>
+			<section class="form-content">
 
-				<!-- <button class="btn test" type="button">test</button> -->
-				<p class="success form-info hidden">Form sumbitted successfully</p>
-				<button class="btn form-btn">submit</button>
-			</form>
+				<div class="close-modal">
+					<img
+						src="assets/images/icon-close.svg"
+						alt="close modal"
+						class="close-btn"
+					/>
+				</div>
+				<form action="/" method="post" class="form">
+					<!-- https://formspree.io/f/mnqybqrz -->
+					<h3 class="heading">Register to connect</h3>
+					<label class="form__item">
+						<span class="form__item--label">name</span>
+						<input
+							type="text"
+							required
+							name="Name"
+							placeholder="John Doe"
+							autofocus
+							class="form__item--input"
+						/>
+					</label>
+					<label class="form__item">
+						<span class="form__item--label">email</span>
+						<input
+							type="email"
+							required
+							name="Email"
+							placeholder="email@example.com"
+							class="form__item--input"
+						/>
+					</label>
+					<label class="form__item">
+						<span class="form__item--label"
+							>Phone number <span class="faded">(optional)</span></span
+						>
+						<input
+							type="tel"
+							name="Mobile Number"
+							placeholder="08012345678"
+							class="form__item--input tel"
+						/>
+						<cite class="validation-message hidden"
+							>Please enter a valid phone number</cite
+						>
+					</label>
+					<label class="form__item">
+						<span class="form__item--label">country</span>
+						<select name="country" id="country"></select>
+					</label>
+	
+					<!-- <button class="btn test" type="button">test</button> -->
+					<p class="success form-info hidden">Form sumbitted successfully</p>
+					<button class="btn form-btn">submit</button>
+				</form>
+			</section>
 		</aside>
 	</body>
 </html>
