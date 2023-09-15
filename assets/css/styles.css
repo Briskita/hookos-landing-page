@@ -1,5 +1,6 @@
 /*================ PUBLIC SANS (FONT) ===========*/
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+/*================ INCLUSIVE SANS (FONT) ===========*/
 @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
 
 html {
@@ -108,7 +109,7 @@ a:link {
 	right: 4rem;
 	border-radius: 1rem;
 	background-color: rgb(233, 230, 230);
-	z-index: 50;
+	z-index: 3;
 }
 .navigation-link {
 	text-align: center;
@@ -241,6 +242,7 @@ body {
 .social__link--icon {
 	width: 3rem;
 	aspect-ratio: 1/1;
+	border-radius: .5rem;
 	transition: all 0.2s ease-in-out;
 	transform-origin: left;
 	object-fit: fill;
@@ -259,7 +261,7 @@ body {
 	background-color: #807e7e;
 	position: fixed;
 	inset: 0;
-	z-index: 10;
+	z-index: 5;
 	transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
 }
 
