@@ -142,7 +142,8 @@ body {
 }
 
 .heading {
-	font-family: cursive;
+	/* font-family: cursive; */
+
 	text-transform: uppercase;
 	font-size: 1.4rem;
 	line-height: 1;
