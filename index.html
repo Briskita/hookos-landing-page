@@ -15,26 +15,27 @@
 			<header class="header">
 				<!-- <img src="assets/images/logo-black.jpg" class="logo" alt="hookos" /> -->
 				<!-- NAVIGATION -->
-				<div class="toggle active"></div>
-				<nav class="navigation hidden">
+				<!-- <div class="toggle active"></div> -->
+				<nav class="navigation">
 					<a href="#home" class="navigation-link">hookos nation</a>
 				</nav>
 			</header>
-			<section class="container">
+			<section class="white-wrapper">
 				<div class="img__wrapper">
-
+	
 					<img src="assets/images/hookos-bg-img.jpg" alt="" class="main__img">
 				</div>
+				<h2 class="heading"><span class="light">...You'll find love here!</span><span class="heavy">connect with christians</span></h2>
+
+				<button class="btn show-modal" type="button">Join us</button>
+			</section>
+			<section class="container black-wrapper">
 				<article class="txt-content">
 
-					<h2 class="heading">...You'll find love here! connect with <span>christians</span></h2>
-					<button class="btn show-modal" type="button">Join us</button>
-					<h4 class="quote-txt">It's rebirth of the early church! <span class="verse">acts 2</span></h4>
+					<h4 class="quote-txt">It's rebirth of the early church! <span class="verse">Acts 2</span></h4>
 					
 					<p class="main-txt">...All the believers were together and had everything in common. They sold property and possesions to give to anyone who had need. Everyday they continued to meet together in the temple courts. They broke bread in their homes and ate together with glad and sincere hearts, praising God and enjoying the favor of all the people. And the Lord added to their number daily those who were being saved.</p>
 				</article>
-			</section>
-			<!-- BUTTON -->
 			<footer class="footer">
 				<p class="footer__txt">Kindly follow us on socials:</p>
 				<!-- SOCIAL LINKS -->
@@ -71,7 +72,7 @@
 						title="Tiktok"
 						rel="noopener noreferrer"
 						><img
-							src="assets/images/tiktok-icon.png"
+							src="assets/images/icon-tiktok.svg"
 							alt="tiktok"
 							class="social__link--icon tiktok"
 					/></a>
@@ -89,6 +90,8 @@
 					/></a>
 				</article>
 			</footer>
+		</section>
+
 		</main>
 		<!-- FORM -->
 		<aside class="form-container hidden">
@@ -111,7 +114,7 @@
 							required
 							name="Name"
 							placeholder="John Doe"
-							autofocus
+							autofocus autocomplete="cc-name"
 							class="form__item--input"
 						/>
 					</label>
@@ -119,7 +122,7 @@
 						<span class="form__item--label">email</span>
 						<input
 							type="email"
-							required
+							required autocomplete="on"
 							name="Email"
 							placeholder="email@example.com"
 							class="form__item--input"
@@ -131,7 +134,7 @@
 						>
 						<input
 							type="tel"
-							name="Mobile Number"
+							name="Mobile Number" autocomplete="tel"
 							placeholder="08012345678"
 							class="form__item--input tel"
 						/>
@@ -141,12 +144,12 @@
 					</label>
 					<label class="form__item">
 						<span class="form__item--label">country</span>
-						<select name="country" id="country"></select>
+						<select name="country" autocomplete="country" id="country"></select>
 					</label>
 	
 					<!-- <button class="btn test" type="button">test</button> -->
 					<p class="success form-info hidden">Form sumbitted successfully</p>
-					<button class="btn form-btn">submit</button>
+					<button type="submit" class="btn form-btn">submit</button>
 				</form>
 			</section>
 		</aside>
