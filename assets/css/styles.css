@@ -118,10 +118,6 @@ body {
 .heading {
 	display: flex;
 	flex-direction: column;
-	text-transform: capitalize;
-	/* font-family: cursive; */
-
-	text-transform: uppercase;
 	font-size: 1.4rem;
 	line-height: 1;
 	font-weight: bold;
@@ -130,6 +126,7 @@ body {
 }
 
 .heavy {
+	text-transform: uppercase;
 	font-weight: 700;
 	margin-top: 2rem;
 	font-size: 3rem;
@@ -139,6 +136,7 @@ body {
 }
 
 .light {
+	text-transform: capitalize;
 	font-size: 2.5rem;
 	font-family: 'Moon Dance', 'Helvetica Neue', sans-serif;
 	font-style: italic;
