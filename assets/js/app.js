@@ -3,8 +3,8 @@ import countriesData from './script.js';
 
 // ===================== UI ELEMENT SELECTORS ====================
 // NAVBAR
-// const toggle = document.querySelector('.toggle');
-// const navigation = document.querySelector('nav');
+const toggle = document.querySelector('.toggle');
+const navigation = document.querySelector('nav');
 // FORM
 const ShowModal = document.querySelector('.show-modal');
 const hideModal = document.querySelector('.close-btn');
@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // TOGGLE THE NAVIGATION SECTION
-// toggle.addEventListener('click', () => {
-// 	toggle.classList.toggle('active');
-// 	navigation.classList.toggle('hidden');
-// });
+toggle.addEventListener('click', () => {
+	toggle.classList.toggle('active');
+	navigation.classList.toggle('hidden');
+});
 
 // TOGGLE FORM DISPLAY
 // SHOW FORM

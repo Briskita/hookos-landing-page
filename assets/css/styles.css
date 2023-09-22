@@ -71,8 +71,44 @@ a:link {
 	padding-right: 2rem;
 	padding-top: 2rem;
 }
+/*================= NAVBAR TOGGLE ==============*/
+.toggle {
+	display: inline-block;
+	background-image: url('../images/icon-close.svg');
+	background-size: 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 3rem;
+	height: 2rem;
+	margin-left: auto;
+	margin-top: 2rem;
+	cursor: pointer;
+}
+.toggle.active {
+	display: inline-block;
+	background-image: url('../images/icon-hamburger.svg');
+	background-size: cover;
+	width: 3rem;
+	height: 2rem;
+	padding-right: 2rem;
+	padding-top: 2rem;
+}
 
 /*================= NAVBAR ==============*/
+.navigation {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+	gap: 2rem;
+	max-width: 70%;
+	top: 4rem;
+	right: 4rem;
+	border-radius: 1rem;
+	background-color: rgb(233, 230, 230);
+	z-index: 3;
+}
+
 .navigation-link {
 	text-align: center;
 	text-transform: capitalize;
@@ -335,4 +371,38 @@ body {
 /* without the need for increasing specificity */
 .hidden {
 	display: none;
+}
+
+/*============= MEDIA QUERIES ===========*/
+@media screen and (min-width: 720px) {
+	.btn:hover {
+		background-color: transparent;
+		color: rgb(24, 23, 23);
+	}
+
+	.toggle,
+	.toggle.active  {
+		display: none;
+	}
+
+	.navigation,
+	.navigation.hidden {
+		flex-direction: row;
+		display: flex;
+		position: unset;
+		z-index: unset;
+		background-color: transparent;
+		margin-right: 2rem;
+		width: max-content;
+	}
+
+	.navigation-link {
+		font-size: 1.8rem;
+	}
+
+	.navigation-link:hover {
+		border-bottom: 2px solid rgb(23, 23, 24);
+		padding-bottom: 0;
+	}
+
 }
