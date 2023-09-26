@@ -131,12 +131,18 @@
 						<span class="form__item--label"
 							>Phone number <span class="faded">(optional)</span></span
 						>
-						<input
-							type="tel"
-							name="Mobile Number" autocomplete="tel"
-							placeholder="08012345678"
-							class="form__item--input tel"
-						/>
+						<div class="tel-input-wrapper">
+							<select name="Country Code" autocomplete="tel-country-code" id="country-code" class="country-code-input">
+								<option value="">-- country code ---</option>
+							</select>
+
+							<input
+								type="tel"
+								name="Mobile Number" autocomplete="tel"
+								placeholder="Phone number..."
+								class="form__item--input tel"
+							/>
+						</div>
 						<cite class="validation-message hidden"
 							>Please enter a valid phone number</cite
 						>
