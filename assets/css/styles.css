@@ -186,7 +186,7 @@ body {
 .main__img {
 	width: 100%;
 	object-fit: contain;
-	border-radius: .5rem 5rem .5rem 5rem;
+	/* border-radius: .5rem 5rem .5rem 5rem; */
 }
 
 .main-txt {
