@@ -150,6 +150,12 @@ body {
 	padding: 2rem;
 }
 
+.white-wrapper {
+	margin-top: -5rem;
+	padding-inline: 0;
+	z-index: -1;
+}
+
 
 .heading {
 	display: flex;
@@ -158,6 +164,7 @@ body {
 	line-height: 1;
 	font-weight: bold;
 	margin-top: 2rem;
+	padding-inline: 2rem;
 	text-align: center;
 }
 
