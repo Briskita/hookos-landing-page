@@ -9,8 +9,6 @@ const navigation = document.querySelector('nav');
 const ShowModal = document.querySelector('.show-modal');
 const hideModal = document.querySelector('.close-btn');
 const formContainer = document.querySelector('.form-container');
-// const numberInput = document.querySelector('.tel');
-// const validationMessage = document.querySelector('.validation-message');
 const countriesInput = document.getElementById('country');
 const countryCodeInput = document.getElementById('country-code')
 const form = document.querySelector('.form');
@@ -36,8 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	countryCodeInput.innerHTML = countryCodes;
 });
 
-// CHANGE SELECTED COUNTRY CODE WHENEVER USER SELECTS A DIFFERENT COUNTRY NAME
-// CHANGE THE COUNTRY CODE TO MATCH THE COUNTRY NAME
+//  CHANGE SELECTED COUNTRY CODE WHENEVER USER SELECTS A DIFFERENT COUNTRY NAME
+//  CHANGE THE COUNTRY CODE TO MATCH THE COUNTRY NAME
 countriesInput.onchange = (e) => {
 	const selectedCountry = countriesInput.options[e.target.selectedIndex]
 	countryCodeInput.value = selectedCountry.attributes['data-code'].nodeValue
@@ -71,15 +69,12 @@ hideModal.addEventListener('click', () => {
 
 // ======================= FUNCTIONS ===================
 
-// GET COUNTRY CODE FROM SELECTED COUNTRY OPTION
-// no longer necessary since I already added the country code select
-// function getCountryCode() {
-// 	let option = countriesInput.options[countriesInput.selectedIndex];
-// 	let countryCode = option.attributes['data-code'].nodeValue;
-// 	return countryCode;
-// }
-
 // RETURN AN OPTION ELEMENT WITH A COUNTRY NAME
+/**
+ * @param {object} country an object containing a phone_code and country name
+ * @returns {HTMLOptionElement} an option element containing a data-code attribute equivalent to the country code, 
+ * a value and textContent equivalent to the country name of the provided country object
+ */
 function returnCountryOptions(country) {
 	let countryCode = country.phone_code;
 	let countryName = country.country_name;
@@ -90,6 +85,11 @@ function returnCountryOptions(country) {
 }
 
 // RETURN AN OPTION ELEMENT WITH A COUNTRY CODE
+/**
+ * @param {object} country an object containing a phone_code and country name
+ * @returns {HTMLOptionElement} an option element containing a data-country attribute equivalent to the country name, 
+ * a value and textContent equivalent to the country code of the provided country object
+ */
 function returnCountryCodeOptions(country) {
 	let countryCode = country.phone_code;
 	let countryName = country.country_name;
@@ -102,15 +102,12 @@ function returnCountryCodeOptions(country) {
 // SUBMIT FORM ACTION
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
-	// const countryCode = getCountryCode();
-
 	let formData = new FormData(form);
 
 	let message = '<h4>You have a new form submission</h4><br><br>';
 	for (let pair of formData.entries()) {
 		message += `<strong>${pair[0]}:</strong> ${pair[1]} <br>`;
 	}
-	// message += `<strong>Country Code:</strong> ${countryCode}`;
 
 	Email.send({
 		Host: 'smtp.elasticemail.com',

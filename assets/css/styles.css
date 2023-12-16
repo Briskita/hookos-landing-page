@@ -70,6 +70,8 @@ a:link {
 	align-items: flex-start;
 	padding-right: 2rem;
 	padding-top: 2rem;
+	z-index: 2;
+	position: absolute;
 }
 /*================= NAVBAR TOGGLE ==============*/
 .toggle {
@@ -102,8 +104,8 @@ a:link {
 	padding: 2rem;
 	gap: 2rem;
 	max-width: 70%;
-	top: 4rem;
-	right: 4rem;
+	top: 3rem;
+	right: 5.2rem;
 	border-radius: 1rem;
 	background-color: rgb(233, 230, 230);
 	z-index: 3;
@@ -151,9 +153,7 @@ body {
 }
 
 .white-wrapper {
-	margin-top: -5rem;
 	padding-inline: 0;
-	z-index: -1;
 }
 
 
@@ -193,7 +193,6 @@ body {
 .main__img {
 	width: 100%;
 	object-fit: contain;
-	/* border-radius: .5rem 5rem .5rem 5rem; */
 }
 
 .main-txt {
@@ -203,7 +202,6 @@ body {
 	z-index: 1;
 }
 
-/* .main-txt::after, */
 .main-txt::before {
 	display: flex;
 	font-size: 25rem;
@@ -218,12 +216,6 @@ body {
 	left: -1rem;
 	top: -7rem;
 }
-
-/* .main-txt::after {
-	content: close-quote;
-	right: -2rem;
-	bottom: -8rem;
-} */
 
 /* BIBLE VERSE QUOTE */
 .quote-txt {
@@ -350,7 +342,6 @@ body {
 
 .form__item--label {
 	text-transform: capitalize;
-	/* padding-left: 1rem; */
 }
 
 .form__item--input, .country-code-input,
